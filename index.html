@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cardápio Digital</h1>
+    </header>
+
+    <nav>
+        <button class="category-btn" onclick="filterItems('pizzas')">Pizzas</button>
+        <button class="category-btn" onclick="filterItems('hamburguer-tradicional')">Hambúrguer Tradicional</button>
+        <button class="category-btn" onclick="filterItems('hamburguer-gourmet')">Hambúrguer Gourmet</button>
+        <button class="category-btn" onclick="filterItems('pasteis')">Pastéis</button>
+        <button class="category-btn" onclick="filterItems('cachorro-quente')">Cachorro-Quente</button>
+        <button class="category-btn" onclick="filterItems('bebidas')">Bebidas</button>
+        <button class="category-btn" onclick="filterItems('sobremesas')">Sobremesas</button>
+    </nav>
+
+    <section id="menu-items">
+        <div class="item" data-category="pizzas">
+            <h2>Pizza de Calabresa</h2>
+            <p>Massa, Molho de Tomate, Queijo Mussarela, Linguiça Calabresa, Cebola, e Azeitona</p>
+            <p>Tamanhos:</p>
+            <ul>
+                <li>P - R$ 25,00</li>
+                <li>M - R$ 35,00</li>
+                <li>G - R$ 45,00</li>
+            </ul>
+
+            <button onclick="addToCart('Pizza de Calabresa P', 25)">Adicionar P</button>
+            <button onclick="addToCart('Pizza de Calabresa M', 35)">Adicionar M</button>
+            <button onclick="addToCart('Pizza de Calabresa G', 45)">Adicionar G</button>
+        </div>
+
+        <div class="item" data-category="pizzas">
+            <h2>Pizza Marguerita</h2>
+            <p>Massa, Molho de Tomate, Queijo Mussarela, Folhas de Manjericão Fresco, Cebola, e Azeitona</p>
+
+            <p>Tamanhos:</p>
+            <ul>
+                <li>P - R$ 27,00</li>
+                <li>M - R$ 37,00</li>
+                <li>G - R$ 47,00</li>
+            </ul>
+            <button onclick="addToCart('Pizza Marguerita P', 27)">Adicionar P</button>
+            <button onclick="addToCart('Pizza Marguerita M', 37)">Adicionar M</button>
+            <button onclick="addToCart('Pizza Marguerita G', 47)">Adicionar G</button>
+        </div>
+
+        <div class="item" data-category="pizzas">
+            <h2>Pizza de Frango com Catupiry</h2>
+            <p>Massa, Molho de Tomate, Frango Desfiado, Catupiry, Linguiça Calabresa, Cebola, e Azeitona</p>
+
+            <p>Tamanhos:</p>
+            <ul>
+                <li>P - R$ 30,00</li>
+                <li>M - R$ 40,00</li>
+                <li>G - R$ 50,00</li>
+            </ul>
+            <button onclick="addToCart('Pizza de Frango com Catupiry P', 30)">Adicionar P</button>
+            <button onclick="addToCart('Pizza de Frango com Catupiry M', 40)">Adicionar M</button>
+            <button onclick="addToCart('Pizza de Frango com Catupiry G', 50)">Adicionar G</button>
+        </div>
+
+        <!-- Resto do menu... -->
+
+        <div class="item" data-category="hamburguer-tradicional">
+            <h2>Hambúrguer Tradicional</h2>
+            <p>Hambúrguer, queijo, alface, tomate - R$ 18,00</p>
+            <button onclick="addToCart('Hambúrguer Tradicional', 18)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="hamburguer-gourmet">
+            <h2>Hambúrguer Gourmet</h2>
+            <p>Hambúrguer, queijo brie, rúcula, cebola caramelizada - R$ 25,00</p>
+            <button onclick="addToCart('Hambúrguer Gourmet', 25)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="hamburguer-gourmet">
+            <h2>Hambúrguer com Molho Barbecue</h2>
+            <p>Hambúrguer, queijo, cebola roxa, molho barbecue - R$ 22,00</p>
+            <button onclick="addToCart('Hambúrguer com Molho Barbecue', 22)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="pasteis">
+            <h2>Pastel de Carne</h2>
+            <p>Pastel com recheio de carne - R$ 8,00</p>
+            <button onclick="addToCart('Pastel de Carne', 8)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="pasteis">
+            <h2>Pastel de Queijo</h2>
+            <p>Pastel com recheio de queijo - R$ 8,00</p>
+            <button onclick="addToCart('Pastel de Queijo', 8)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="pasteis">
+            <h2>Pastel de Frango com Catupiry</h2>
+            <p>Pastel com recheio de frango e catupiry - R$ 9,00</p>
+            <button onclick="addToCart('Pastel de Frango com Catupiry', 9)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="cachorro-quente">
+            <h2>Cachorro-Quente Simples</h2>
+            <p>Pão, salsicha, ketchup e mostarda - R$ 7,00</p>
+            <button onclick="addToCart('Cachorro-Quente Simples', 7)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="cachorro-quente">
+            <h2>Cachorro-Quente Completo</h2>
+            <p>Pão, salsicha, queijo, batata palha, ketchup e mostarda - R$ 10,00</p>
+            <button onclick="addToCart('Cachorro-Quente Completo', 10)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="bebidas">
+            <h2>Coca-Cola 350ml</h2>
+            <p>R$ 5,00</p>
+            <button onclick="addToCart('Coca-Cola 350ml', 5)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="bebidas">
+            <h2>Suco Natural de Laranja</h2>
+            <p>R$ 7,00</p>
+            <button onclick="addToCart('Suco Natural de Laranja', 7)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="bebidas">
+            <h2>Água Mineral</h2>
+            <p>R$ 3,00</p>
+            <button onclick="addToCart('Água Mineral', 3)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="sobremesas">
+            <h2>Pudim</h2>
+            <p>Pudim de leite condensado - R$ 10,00</p>
+            <button onclick="addToCart('Pudim', 10)">Adicionar ao pedido</button>
+        </div>
+
+        <div class="item" data-category="sobremesas">
+            <h2>Brownie de Chocolate</h2>
+            <p>Brownie de chocolate com sorvete - R$ 12,00</p>
+            <button onclick="addToCart('Brownie de Chocolate', 12)">Adicionar ao pedido</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Seu Pedido</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="total-price">0</span></p>
+
+        <!-- Formulário de pedido -->
+        <form id="order-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" required>
+
+            <label for="payment-method">Forma de Pagamento:</label>
+            <select id="payment-method" required>
+                <option value="">Selecione</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cartao">Cartão</option>
+                <option value="pix">Pix</option>
+            </select>
+
+            <button type="submit">Finalizar Pedido</button>
+        </form>
+    </section>
+    <!-- Botão fixo do carrinho -->
+    <button class="fixed-cart-btn" onclick="document.getElementById('cart').scrollIntoView();">
+        Carrinho (<span id="item-count">0</span>)
+    </button>
+
+    <footer>
+        <p>Entre em contato pelo WhatsApp: <a
+                href="https://www.instagram.com/web_master16/profilecard/?igsh=MWtoZTE3NDhzYnppaw==">Criado por Web
+                Master</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
