@@ -1,64 +1,6 @@
 /* Estilos gerais */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://example.com/imagem-de-fundo.jpg');
-    /* Substitua pela URL da sua imagem de fundo */
-    background-size: cover;
-    /* Faz a imagem cobrir toda a tela */
-    background-position: center;
-    /* Centraliza a imagem */
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* Cabeçalho */
-header {
-    background-color: rgba(51, 51, 51, 0.8);
-    /* Fundo escuro com transparência */
-    color: white;
-    text-align: center;
-    padding: 1.5em 0;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-/* Itens do menu */
-.item {
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Fundo branco com leve transparência */
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    border-radius: 15px;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Carrinho */
-#cart {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Fundo do carrinho com leve transparência */
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Estilos gerais */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('img/fundo.png');
     /* Substitua pela URL da sua imagem de fundo */
     background-size: 100% 100%;
@@ -71,10 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-
-
 
 /* Cabeçalho */
 header {
@@ -166,14 +105,14 @@ nav::-webkit-scrollbar {
     cursor: pointer;
     border-radius: 25px;
     transition: background-color 0.3s ease;
-    margin: 10px 20px; /* Aumente o valor aqui para aumentar o espaço vertical */
+    margin: 10px 20px;
+    /* Aumente o valor aqui para aumentar o espaço vertical */
     /* width: 100px; */
 
 }
 
 .item button:hover {
     background-color: #45a049;
-    
 }
 
 /* Carrinho */
@@ -202,6 +141,216 @@ nav::-webkit-scrollbar {
     font-size: 0.9em;
 }
 
+/* Botão fixo do carrinho */
+.fixed-cart-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fedd00;
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    /* Garantir que o botão fique acima de outros elementos */
+}
+
+.fixed-cart-btn:hover {
+    background-color: #ffdf6b;
+}
+
+/* Estilo do formulário */
+#order-form {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+#order-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#order-form input,
+#order-form select,
+#order-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#order-form input:focus,
+#order-form select:focus,
+#order-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#order-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#order-form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img/fundo.png');
+    /* Substitua pela URL da sua imagem de fundo */
+    background-size: 100% 100%;
+    /* Faz a imagem cobrir toda a tela */
+    background-position: center;
+    /* Centraliza a imagem */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    /* Fundo escuro com transparência */
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Título do cabeçalho */
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Navegação com rolagem horizontal */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    width: 90%;
+    padding: 10px 0;
+}
+
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botões das categorias */
+.category-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 0 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Itens do menu */
+#menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fundo branco com leve transparência */
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin: 10px 20px;
+    /* Aumente o valor aqui para aumentar o espaço vertical */
+    /* width: 100px; */
+
+}
+
+.item button:hover {
+    background-color: #45a049;
+}
+
+/* Carrinho */
+#cart {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fundo do carrinho com leve transparência */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+
+#cart-items li {
+    margin: 8px 0;
+    font-size: 0.9em;
+}
 
 /* Botão fixo do carrinho */
 .fixed-cart-btn {
